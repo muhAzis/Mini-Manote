@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 40px;
+  background-color: var(--clr-main);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Media Query */
+@media screen and (max-width: 576px) {
+  nav {
+    gap: 20px;
+  }
+}

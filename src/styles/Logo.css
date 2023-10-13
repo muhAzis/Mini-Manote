@@ -1,0 +1,16 @@
+#logo {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo svg {
+  width: 26px;
+}
+
+#logo p.logo-text {
+  color: var(--clr-text-second2);
+  font-size: 1.8rem;
+  font-weight: 700;
+}

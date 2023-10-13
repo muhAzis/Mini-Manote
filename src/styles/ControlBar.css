@@ -1,0 +1,71 @@
+#controlBar {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#controlBar .sorting-container {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#controlBar .sorting-container::-webkit-scrollbar {
+  display: none;
+}
+
+#controlBar .sorting-container .sort-reverse {
+  font-size: 1.3rem;
+  line-height: 0;
+}
+
+#controlBar .sorting-container .sort-reverse,
+#controlBar .sorting-container .sort-menu {
+  padding: 6px 10px;
+  white-space: nowrap;
+  background-color: var(--clr-action2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#controlBar .sorting-container .sort-reverse:hover,
+#controlBar .sorting-container .sort-menu:hover {
+  background-color: var(--clr-action);
+}
+
+#controlBar .sorting-container .sort-reverse.active,
+#controlBar .sorting-container .sort-menu.active {
+  background-color: var(--clr-action);
+}
+
+#controlBar button.add-note-btn {
+  display: flex;
+  gap: 10px;
+  color: var(--clr-action);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#controlBar button.add-note-btn i {
+  font-size: 1.8rem;
+  line-height: 0;
+}
+
+#controlBar button.add-note-btn:hover {
+  color: var(--clr-action2);
+}

@@ -1,0 +1,113 @@
+#darkModeBtn {
+  position: relative;
+  display: flex;
+  width: 70px;
+  height: 40px;
+  color: var(--clr-planet2);
+  background-color: var(--clr-sky);
+  border-radius: 30px;
+  outline: 2px solid var(--clr-planet);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#darkModeBtn .dark {
+  left: 0;
+  transform: none;
+}
+
+#darkModeBtn .toggle-dark-mode {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 5px;
+  color: var(--clr-planet2);
+  font-size: 1.6rem;
+  line-height: 0;
+  background-color: var(--clr-planet);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+#darkModeBtn .dark-mode {
+  left: 100%;
+  transform: translateX(-35px);
+}
+
+#darkModeBtn .moon-hole {
+  position: absolute;
+  display: inline;
+  background-color: var(--clr-planet-accent);
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+#darkModeBtn .hole1 {
+  width: 40%;
+  height: 40%;
+  top: 0.2rem;
+  left: 0.3rem;
+}
+
+#darkModeBtn .hole2 {
+  width: 25%;
+  height: 25%;
+  top: 0.8rem;
+  left: 1.3rem;
+}
+
+#darkModeBtn .hole3 {
+  width: 15%;
+  height: 15%;
+  bottom: 0.4rem;
+  left: 0.7rem;
+}
+
+#darkModeBtn .cloud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  fill: var(--clr-cloud2);
+  transition: all 0.8s;
+}
+
+#darkModeBtn .cloud1 {
+  bottom: 0.4rem;
+  fill: var(--clr-cloud1);
+}
+
+#darkModeBtn .cloud.dark {
+  transform: translateY(120%);
+}
+
+#darkModeBtn .star {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s;
+}
+
+#darkModeBtn .star.dark {
+  opacity: 1;
+}
+
+#darkModeBtn .star1 {
+  top: 0.4rem;
+  left: 0.6rem;
+}
+
+#darkModeBtn .star2 {
+  top: 1.2rem;
+  left: 1.4rem;
+}
+
+#darkModeBtn .star3 {
+  bottom: 0.4rem;
+  left: 0.6rem;
+}

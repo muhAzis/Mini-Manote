@@ -1,0 +1,119 @@
+#noteDetail {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  color: var(--clr-text1);
+  background-color: var(--clr-bg-light-trans3);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
+}
+
+#noteDetail .back-btn {
+  position: absolute;
+  display: flex;
+  gap: 6px;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#noteDetail .back-btn:hover {
+  color: var(--clr-action);
+}
+
+#noteDetail .back-btn i {
+  font-size: 2rem;
+  line-height: 0;
+}
+
+#noteDetail .note-detail-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+#noteDetail .note-detail-container h1.title {
+  position: relative;
+  display: flex;
+}
+
+#noteDetail .note-detail-container h1.title i {
+  position: absolute;
+  color: var(--clr-action);
+  font-size: 1rem;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+#noteDetail .note-detail-container h3.last-updated {
+  color: var(--clr-action2);
+}
+
+#noteDetail .note-detail-container h5.id {
+  color: var(--clr-text2);
+}
+
+#noteDetail .note-detail-container p.body {
+  margin-block: 20px;
+  padding: 20px;
+  background-color: var(--clr-bg-dark-trans3);
+  box-shadow: var(--clr-box-shadow3);
+  border-radius: 10px;
+  white-space: pre-wrap;
+}
+
+#noteDetail .note-detail-container h4.created {
+  color: var(--clr-text2);
+}
+
+#noteDetail .action-buttons {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+#noteDetail .action-buttons .button {
+  display: flex;
+  padding: 14px 20px;
+  gap: 10px;
+  line-height: 0;
+  background-color: var(--clr-bg-dark-trans3);
+  border-radius: 5px;
+  transition: all 0.2s;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#noteDetail .action-buttons .button i {
+  background-color: transparent;
+}
+
+#noteDetail .action-buttons .delete-btn {
+  color: var(--clr-danger);
+  background-color: var(--clr-danger3);
+}
+
+#noteDetail .action-buttons .button:hover {
+  color: var(--clr-text-second);
+  background-color: var(--clr-action);
+}
+
+#noteDetail .action-buttons .delete-btn:hover {
+  color: var(--clr-text-second);
+  background-color: var(--clr-danger);
+}
