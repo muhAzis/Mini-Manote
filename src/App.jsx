@@ -45,24 +45,33 @@ function App() {
         renderNotes.length ? (
           <>
             <NotesContainer title={'Notes'}>
-              {renderNotes.map(
-                (note) =>
-                  !note.archived && (
-                    <NoteCard key={note.id} {...note} archive={toggleArchive} detail={showDetail} setDetail={setShowDetail} setNote={setCurrentNote} deleteNote={deleteNote}>
-                      {note.id === currentNote && <NoteDetail {...note} show={setShowDetail} archive={toggleArchive} deleteNote={deleteNote} showForm={setDisplayEditForm} />}
-                    </NoteCard>
-                  )
+              {console.log(renderNotes.filter((note) => note.archived === false).length)}
+              {renderNotes.filter((note) => note.archived === false).length ? (
+                renderNotes.map(
+                  (note) =>
+                    !note.archived && (
+                      <NoteCard key={note.id} {...note} archive={toggleArchive} detail={showDetail} setDetail={setShowDetail} setNote={setCurrentNote} deleteNote={deleteNote}>
+                        {note.id === currentNote && <NoteDetail {...note} show={setShowDetail} archive={toggleArchive} deleteNote={deleteNote} showForm={setDisplayEditForm} />}
+                      </NoteCard>
+                    )
+                )
+              ) : (
+                <h3 className="no-notes">No unarchived notes</h3>
               )}
             </NotesContainer>
 
             <NotesContainer title={'Archive'}>
-              {renderNotes.map(
-                (note) =>
-                  note.archived && (
-                    <NoteCard key={note.id} {...note} archive={toggleArchive} detail={showDetail} setDetail={setShowDetail} setNote={setCurrentNote} deleteNote={deleteNote}>
-                      {note.id === currentNote && <NoteDetail {...note} show={setShowDetail} archive={toggleArchive} deleteNote={deleteNote} showForm={setDisplayEditForm} />}
-                    </NoteCard>
-                  )
+              {renderNotes.filter((note) => note.archived === true).length ? (
+                renderNotes.map(
+                  (note) =>
+                    note.archived && (
+                      <NoteCard key={note.id} {...note} archive={toggleArchive} detail={showDetail} setDetail={setShowDetail} setNote={setCurrentNote} deleteNote={deleteNote}>
+                        {note.id === currentNote && <NoteDetail {...note} show={setShowDetail} archive={toggleArchive} deleteNote={deleteNote} showForm={setDisplayEditForm} />}
+                      </NoteCard>
+                    )
+                )
+              ) : (
+                <h3 className="no-notes">No archived notes</h3>
               )}
             </NotesContainer>
           </>

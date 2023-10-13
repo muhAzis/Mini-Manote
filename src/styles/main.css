@@ -141,3 +141,9 @@ button {
   background-color: var(--clr-bg-light2);
   align-items: center;
 }
+
+.no-notes {
+  width: 100%;
+  color: var(--clr-text2);
+  text-align: center;
+}
